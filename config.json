@@ -24,7 +24,9 @@
 	],
 
 	"permissions": [
-		"redcap_every_page_before_render"
+		"redcap_every_page_before_render",
+		"redcap_every_page_top",
+		"redcap_project_home_page"
 	],
 
 	"links": {
