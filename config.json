@@ -46,7 +46,7 @@
 		},
 		{
 			"key": "language_updates",
-			"name": "Per-Survey Customizations",
+			"name": "Per-Project Customizations",
 			"required": false,
 			"type": "sub_settings",
 			"repeatable": true,
