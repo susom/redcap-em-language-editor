@@ -26,18 +26,19 @@ class LanguageEditor extends \ExternalModules\AbstractExternalModule
         foreach ($updates as $update) {
             $k = $update['language_key'];
             $v = $update['language_value'];
-            $this->emDebug($k, $v);
+//            $this->emDebug($k, $v);
+//
+//                if ($lang['key'] = $k)
+//                {
+//                    $lang['value'] = $v;
+//                }
+//
+//           $this->emDebug($lang['key']);
+//           $this->emDebug($lang['value']);
 
-                if ($lang['key'] = $k)
-                {
-                    $lang['value'] = $v;
-                }
 
-           $this->emDebug($lang['key']);
-           $this->emDebug($lang['value']);
-
-            //this is just changing the key not the value
-            $lang[$update['language_key']] = $update['language_value'];
+            //$lang[$update['language_key']] = $update['language_value'];
+            $lang[$k] = $v;
             //$this->emDebug($lang[$update['language_key']]);
 
 
