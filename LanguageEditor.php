@@ -22,12 +22,12 @@ class LanguageEditor extends \ExternalModules\AbstractExternalModule
 
         global $lang;
 
+        // This works for the popup, but not for the codebook description on the project homepage
         foreach ($updates as $update) {
             $k = $update['language_key'];
             $v = $update['language_value'];
             $this->emDebug($k, $v);
 
-// this seems to work but the page isn't updating
                 if ($lang['key'] = $k)
                 {
                     $lang['value'] = $v;
