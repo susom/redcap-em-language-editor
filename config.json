@@ -3,7 +3,7 @@
 
 	"namespace":"Stanford\\LanguageEditor",
 
-	"description": "Allows editing of the language .ini file",
+	"description": "Allows per project customization of the language.ini settings.",
 
 	"authors": [
 		{
@@ -19,9 +19,7 @@
 	],
 
 	"permissions": [
-		"redcap_every_page_before_render",
-		"redcap_every_page_top",
-		"redcap_project_home_page"
+		"redcap_every_page_top"
 	],
 
 	"links": {
@@ -43,7 +41,7 @@
 	"project-settings": [
 		{
 			"key": "global_instructions",
-			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Language Editor</span></h5>",
+			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Instructions</span></h5>Search for the text you would like to replace, copy the ID and enter your replacement text, this text will apply to all pages within the scope of this project",
 			"type": "descriptive"
 		},
 		{
@@ -55,7 +53,7 @@
 			"sub_settings": [
 				{
 					"key": "language_key",
-					"name": "Key of text to be changed",
+					"name": "ID of text to be changed",
 					"required": false,
 					"type": "text"
 				},
@@ -68,10 +66,17 @@
 			]
 		},
 		{
+			"key": "lookuptable",
+			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Search for Text</span></h5>",
+			"type": "descriptive"
+		},
+		{
 			"key": "enable-project-debug-logging",
 			"name": "<b>Enable Debug Logging</b> <i>(Requires emLogger)</i>",
 			"required": false,
-			"type": "checkbox"
+			"type": "checkbox",
+			"source": "config.js",
+			"functionName": "LE.init"
 		}
 
 	]
