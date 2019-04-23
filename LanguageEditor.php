@@ -27,6 +27,7 @@ class LanguageEditor extends \ExternalModules\AbstractExternalModule
             $v = $update['language_value'];
             $this->emDebug($k, $v);
 
+// this seems to work but the page isn't updating
                 if ($lang['key'] = $k)
                 {
                     $lang['value'] = $v;
