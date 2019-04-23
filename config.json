@@ -3,17 +3,12 @@
 
 	"namespace":"Stanford\\LanguageEditor",
 
-	"description": "TBD.",
+	"description": "Allows editing of the language .ini file",
 
 	"authors": [
 		{
 			"name": "Andy Martin",
 			"email": "andy123@stanford.edu",
-			"institution": "Stanford University"
-		},
-		{
-			"name": "YongJae Lee",
-			"email": "jael@stanford.edu",
 			"institution": "Stanford University"
 		},
 		{
@@ -48,7 +43,7 @@
 	"project-settings": [
 		{
 			"key": "global_instructions",
-			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Global Tweaks</span></h5>The following set of tweaks will apply to all surveys in the project.  If configured here, the option will not appear in the per-survey section.",
+			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Language Editor</span></h5>",
 			"type": "descriptive"
 		},
 		{
@@ -60,13 +55,13 @@
 			"sub_settings": [
 				{
 					"key": "language_key",
-					"name": "<b>Changes</b>",
+					"name": "Key of text to be changed",
 					"required": false,
 					"type": "text"
 				},
 				{
 					"key": "language_value",
-					"name": "Language goes here",
+					"name": "New language value",
 					"required": false,
 					"type": "text"
 				}
