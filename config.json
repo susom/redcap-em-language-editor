@@ -1,189 +1,81 @@
 {
-  "name": "Language Editor",
+	"name": "Language Editor",
 
-  "namespace": "Stanford\\LanguageEditor",
+	"namespace":"Stanford\\LanguageEditor",
 
-  "description": "Edit parts of the language.ini file",
+	"description": "TBD.",
 
-  "documentation": "README.md",
+	"authors": [
+		{
+			"name": "Andy Martin",
+			"email": "andy123@stanford.edu",
+			"institution": "Stanford University"
+		},
+		{
+			"name": "YongJae Lee",
+			"email": "jael@stanford.edu",
+			"institution": "Stanford University"
+		},
+		{
+			"name": "Ryan Valentine",
+			"email": "rval@stanford.edu",
+			"institution": "Stanford University"
+		}
+	],
 
-  "authors": [
-    {
-      "name": "Ryan Valentine",
-      "email": "rval@stanford.edu",
-      "institution": "Stanford University"
-    }
-  ],
+	"permissions": [
+		"redcap_every_page_before_render"
+	],
 
-  "permissions": [
-    "hook_every_page_top",
-    "hook_data_entry_form"
-  ],
+	"links": {
+		"control-center": [
+		],
+		"project": [
+		]
+	},
 
-  "system-settings": [
-    {
-      "key": "system-file",
-      "name": "System Upload",
-      "required": false,
-      "type": "file",
-      "repeatable": false
-    },
-    {
-      "key": "system-checkbox",
-      "name": "System Checkbox",
-      "required": false,
-      "type": "checkbox",
-      "repeatable": false
-    },
-    {
-      "key": "system-project",
-      "name": "Project",
-      "required": false,
-      "type": "project-id",
-      "repeatable": false
-    },
-    {
-      "key": "test-list",
-      "name": "List of Sub Settings",
-      "required": true,
-      "type": "sub_settings",
-      "repeatable":true,
-      "sub_settings":[
-        {
-          "key": "system_project_sub",
-          "name": "System Project",
-          "required": true,
-          "type": "project-id"
-        },
-        {
-          "key": "system_project_text",
-          "name": "Sub Text Field",
-          "required": true,
-          "type": "text"
-        }
-      ]
-    }
-  ],
+	"system-settings": [
+		{
+			"key": "enable-system-debug-logging",
+			"name": "<b>Enable Debug Logging (system-wide)</b> <i>(Requires emLogger)</i>",
+			"required": false,
+			"type": "checkbox"
+		}
+	],
 
-  "project-settings": [
-    {
-      "key": "custom-field1",
-      "name": "Custom Field 1",
-      "type": "custom",
-      "source": "js/test_javascript.js",
-      "functionName": "ExternalModulesOptional.customTextAlert"
-    },
-    {
-      "key": "custom-field2",
-      "name": "Custom Field 2",
-      "type": "custom",
-      "source": "extra_types.js",
-      "functionName": "ExternalModulesOptional.addColorToText"
-    },
-    {
-      "key": "test-list2",
-      "name": "List of Sub Settings",
-      "required": true,
-      "type": "sub_settings",
-      "repeatable":true,
-      "sub_settings":[
-        {
-          "key": "form-name",
-          "name": "Form name",
-          "required": true,
-          "type": "form-list"
-        },
-        {
-          "key": "arm-name",
-          "name": "Arm name",
-          "required": true,
-          "type": "arm-list"
-        },
-        {
-          "key": "event-name",
-          "name": "Event name",
-          "required": true,
-          "type": "event-list"
-        },
-        {
-          "key": "test-text",
-          "name": "Text Field",
-          "required": true,
-          "type": "text"
-        }
-      ]
-    },
-    {
-      "key": "text-area",
-      "name": "Text Area",
-      "required": true,
-      "type": "textarea",
-      "repeatable": true
-    },
-    {
-      "key": "rich-text-area",
-      "name": "Rich Text Area",
-      "type": "rich-text"
-    },
-    {
-      "key": "field",
-      "name": "Field",
-      "required": false,
-      "type": "field-list",
-      "repeatable": false
-    },
-    {
-      "key": "dag",
-      "name": "Data Access Group",
-      "required": false,
-      "type": "dag-list",
-      "repeatable": false
-    },
-    {
-      "key": "user",
-      "name": "Users",
-      "required": false,
-      "type": "user-list",
-      "repeatable": false
-    },
-    {
-      "key": "user-role",
-      "name": "User Role",
-      "required": false,
-      "type": "user-role-list",
-      "repeatable": false
-    },
-    {
-      "key": "file",
-      "name": "File Upload",
-      "required": false,
-      "type": "file",
-      "repeatable": false
-    },
-    {
-      "key": "checkbox",
-      "name": "Test Checkbox",
-      "required": false,
-      "type": "checkbox",
-      "repeatable": false
-    },
-    {
-      "key": "radio",
-      "name": "Test Radio",
-      "required": false,
-      "type": "radio",
-      "choices":[
-        {
-          "name" : "My Radio 1",
-          "value" : "1"
-        },
-        {
-          "name" : "My Radio 2",
-          "value" : "2"
-        }
-      ],
-      "repeatable": false
-    }
+	"project-settings": [
+		{
+			"key": "global_instructions",
+			"name": "<h5 class='text-center'><span class='text-lg badge badge-lg badge-success'>Global Tweaks</span></h5>The following set of tweaks will apply to all surveys in the project.  If configured here, the option will not appear in the per-survey section.",
+			"type": "descriptive"
+		},
+		{
+			"key": "language_updates",
+			"name": "Per-Survey Customizations",
+			"required": false,
+			"type": "sub_settings",
+			"repeatable": true,
+			"sub_settings": [
+				{
+					"key": "language_key",
+					"name": "<b>Changes</b>",
+					"required": false,
+					"type": "text"
+				},
+				{
+					"key": "language_value",
+					"name": "Language goes here",
+					"required": false,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"key": "enable-project-debug-logging",
+			"name": "<b>Enable Debug Logging</b> <i>(Requires emLogger)</i>",
+			"required": false,
+			"type": "checkbox"
+		}
 
-  ]
+	]
 }
