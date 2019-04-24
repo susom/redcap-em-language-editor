@@ -12,7 +12,9 @@ class LanguageEditor extends \ExternalModules\AbstractExternalModule
         parent::__construct();
     }
 
-    public function redcap_every_page_top(){
+    public function redcap_every_page_before_render(){
+
+
         $this->emDebug(PAGE);
 
         $updates = $this->getSubSettings('language_updates');
