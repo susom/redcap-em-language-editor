@@ -27,7 +27,7 @@ class LanguageEditor extends \ExternalModules\AbstractExternalModule
             $v = $update['language_value'];
             $this->emDebug($k, $v);
 
-            $lang[$k] = $v;
+            $lang[$k] = strip_tags($v, '<b><i><p><br>');
         }
     }
 }
